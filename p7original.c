@@ -15,7 +15,7 @@ scanf("%d", &value);
 sum = sum + value;
 }
 
-printf("Sum of the integers = %d\n", sum);
+printf("Sum of the integers = %d\n", sum);`
 
 return 0;
 }
