@@ -1,0 +1,24 @@
+(gdb) b main
+Breakpoint 1 at 0x7d6: file p3original.c, line 22.
+(gdb) r
+Starting program: /home/runner/pps-test1-Shashank1726/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p3original.c:22
+22  {
+(gdb) n
+24      input(&a, &b);
+(gdb) n
+Enter the first number: 4
+Enter the second number: 5
+25      add(a, b, &sum);
+(gdb) n
+26      output(a, b, sum);
+(gdb) n
+sum of 4 + 5 is 9
+27      return 0;
+(gdb) n
+28  }(gdb) c
+Continuing.
+[Inferior 1 (process 690) exited normally]
+(gdb) q
