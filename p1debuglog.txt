@@ -1,0 +1,28 @@
+(gdb) b main
+Breakpoint 1 at 0x722: file p1original.c, line 3.
+(gdb) r
+Starting program: /home/runner/pps-test1-Shashank1726/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1original.c:3
+3   {
+(gdb) n
+5      printf("Enter first number: ");
+(gdb) n
+6      scanf("%d", &num1);
+(gdb) n
+Enter first number: 5
+7      printf("Enter second number: ");
+(gdb) n
+8      scanf("%d", &num2);
+(gdb) n
+Enter second number: 4
+10     sum = num1 + num2;
+(gdb) n
+11     printf("Sum of the entered numbers: %d", sum);
+(gdb) n
+12     return 0;
+(gdb) c
+Continuing.
+Sum of the entered numbers: 9[Inferior 1 (process 294) exited normally]
+(gdb) q
