@@ -1,0 +1,51 @@
+(gdb) b main
+Breakpoint 1 at 0x810: file p5final.c, line 23.
+(gdb) r
+Starting program: /home/runner/pps-test1-Viraj200319-10/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5final.c:23
+23  {
+(gdb) n
+25    input(&a, &b, &c);
+(gdb) s
+input (a=0x7fff4fe5ec98, b=0x7fff4fe5ec9c, c=0x7fff4fe5eca0)
+    at p5final.c:7
+7       printf("Enter the first number: ");
+(gdb) n
+8       scanf("%d", a);
+(gdb) n
+Enter the first number: 2
+9       printf("Enter the second number: ");
+(gdb) n
+10      scanf("%d", b);
+(gdb) n
+Enter the second number: 1
+11      printf("Enter the third number: ");
+(gdb) n
+12      scanf("%d", c);
+(gdb) n
+Enter the third number: 3
+13  }
+(gdb) n
+main () at p5final.c:26
+26    cmp(a, b, c, &large);
+(gdb) s
+cmp (a=2, b=1, c=3, large=0x7fff4fe5eca4) at p5final.c:16
+16     *large = a > b ? (a > c ? a : c) : (b > c ? b : c);
+(gdb) n
+17  }
+(gdb) n
+main () at p5final.c:27
+27    output(large);
+(gdb) s
+output (large=3) at p5final.c:19
+19      printf("The largest is: %d\n", large);
+(gdb) n
+The largest is: 3
+20  }
+(gdb) n
+main () at p5final.c:28
+28    return 0;
+(gdb) n
+29  }

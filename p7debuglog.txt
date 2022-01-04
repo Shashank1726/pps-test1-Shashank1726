@@ -1,0 +1,163 @@
+(gdb) b main
+Breakpoint 1 at 0x8ab: file p7final.c, line 35.
+(gdb) r
+Starting program: /home/runner/pps-test1-Viraj200319-2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p7final.c:35
+35  {
+(gdb) n
+37      n = input_size_array();
+(gdb) s
+input_size_array () at p7final.c:5
+5   int input_size_array(){
+(gdb) n
+7       printf("Enter the number of inputs: ");
+(gdb) n
+8       scanf("%d", &n);
+(gdb) n
+Enter the number of inputs: 5
+9       return n;
+(gdb) n
+10  }
+(gdb) n
+main () at p7final.c:38
+38      int a[n];
+(gdb) n
+39      input_array(n, a);
+(gdb) s
+input_array (n=5, a=0x7ffc5cc35e80) at p7final.c:13
+13      for(int i=0; i<n; i++){
+(gdb) n
+14          printf("Enter a number: ");
+(gdb) p i
+$1 = 0
+(gdb) n
+15          scanf("%d", &a[i]);
+(gdb) n
+Enter a number: 2
+13      for(int i=0; i<n; i++){
+(gdb) n
+14          printf("Enter a number: ");
+(gdb) p i
+$2 = 1
+(gdb) n
+15          scanf("%d", &a[i]);
+(gdb) n
+Enter a number: 3
+13      for(int i=0; i<n; i++){
+(gdb) n
+14          printf("Enter a number: ");
+(gdb) p i
+$3 = 2
+(gdb) n
+15          scanf("%d", &a[i]);
+(gdb) n
+Enter a number: 5
+13      for(int i=0; i<n; i++){
+(gdb) n
+14          printf("Enter a number: ");
+(gdb) p i
+$4 = 3
+(gdb) n
+15          scanf("%d", &a[i]);
+(gdb) n
+Enter a number: 6
+13      for(int i=0; i<n; i++){
+(gdb) n
+14          printf("Enter a number: ");
+(gdb) p i
+$5 = 4
+(gdb) n
+15          scanf("%d", &a[i]);
+(gdb) 
+Enter a number: 7
+13      for(int i=0; i<n; i++){
+(gdb) n
+17  }
+(gdb) n
+main () at p7final.c:40
+40      sum = sum_n_arrays(n, a);
+(gdb) s
+sum_n_arrays (n=5, a=0x7ffc5cc35e80) at p7final.c:20
+20      int sum=0;
+(gdb) n
+21      for(int i=0; i<n; i++){
+(gdb) n
+22          sum += a[i];
+(gdb) p i
+$6 = 0
+(gdb) p sum
+$7 = 0
+(gdb) n
+21      for(int i=0; i<n; i++){
+(gdb) n
+22          sum += a[i];
+(gdb) p i
+$8 = 1
+(gdb) p sum
+$9 = 2
+(gdb) n
+21      for(int i=0; i<n; i++){
+(gdb) n
+22          sum += a[i];
+(gdb) p i
+$10 = 2
+(gdb) p sum
+$11 = 5
+(gdb) n
+21      for(int i=0; i<n; i++){
+(gdb) n
+22          sum += a[i];
+(gdb) p i
+$12 = 3
+(gdb) p sum
+$13 = 10
+(gdb) n
+21      for(int i=0; i<n; i++){
+(gdb) n
+22          sum += a[i];
+(gdb) p i
+$14 = 4
+(gdb) p sum
+$15 = 16
+(gdb) n
+21      for(int i=0; i<n; i++){
+(gdb) n
+24      return sum;
+(gdb) p sum
+$16 = 23
+(gdb) n
+25  }
+(gdb) n
+main () at p7final.c:41
+41      output(n, a, sum);
+(gdb) s
+output (n=5, a=0x7ffc5cc35e80, sum=23) at p7final.c:28
+28      for(int i=0; i<n-1; i++){
+(gdb) n
+29          printf("%d+", a[i]);
+(gdb) n
+28      for(int i=0; i<n-1; i++){
+(gdb) n
+29          printf("%d+", a[i]);
+(gdb) n
+28      for(int i=0; i<n-1; i++){
+(gdb) n
+29          printf("%d+", a[i]);
+(gdb) n
+28      for(int i=0; i<n-1; i++){
+(gdb) n
+29          printf("%d+", a[i]);
+(gdb) n
+28      for(int i=0; i<n-1; i++){
+(gdb) n
+31      printf("%d is %d\n", a[n-1], sum);
+(gdb) n
+2+3+5+6+7 is 23
+32  }
+(gdb) n
+main () at p7final.c:42
+42      return 0;
+(gdb) n
+43  }

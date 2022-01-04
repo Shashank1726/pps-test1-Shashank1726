@@ -1,1 +1,203 @@
+(gdb) b main
+Breakpoint 1 at 0xa3f: file p11final.c, line 61.
+(gdb) r
+Starting program: /home/runner/pps-test1-Viraj200319-2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p11final.c:61
+61  int main(){
+(gdb) n
+62    int n = get_n();
+(gdb) s
+get_n () at p11final.c:11
+11  int get_n(){
+(gdb) n
+13    printf("Enter the number of complex numbers: ");
+(gdb) n
+14    scanf("%d", &n);
+(gdb) n
+Enter the number of complex numbers: 3
+15    return n;
+(gdb) n
+16  }
+(gdb) n
+main () at p11final.c:63
+63    Complex c[n], res;
+(gdb) n
+64    input_n_complex(n, c);
+(gdb) s
+input_n_complex (n=3, c=0x7ffeece637a0) at p11final.c:28
+28    for(int i=0; i<n; i++){
+(gdb) n
+29      c[i] = input_complex();
+(gdb) p i
+$1 = 0
+(gdb) s
+input_complex () at p11final.c:18
+18  Complex input_complex(){
+(gdb) n
+20      printf("Enter the real part: ");
+(gdb) n
+21      scanf("%f", &c.real);
+(gdb) n
+Enter the real part: 2
+22      printf("Enter the imaginary part: ");
+(gdb) n
+23      scanf("%f", &c.img);
+(gdb) n
+Enter the imaginary part: 3
+24      return c;
+(gdb) n
+25  }
+(gdb) n
+input_n_complex (n=3, c=0x7ffeece637a0) at p11final.c:28
+28    for(int i=0; i<n; i++){
+(gdb) p i
+$2 = 0
+(gdb) n
+29      c[i] = input_complex();
+(gdb) p i
+$3 = 1
+(gdb) s
+input_complex () at p11final.c:18
+18  Complex input_complex(){
+(gdb) n
+20      printf("Enter the real part: ");
+(gdb) n
+21      scanf("%f", &c.real);
+(gdb) n
+Enter the real part: 4
+22      printf("Enter the imaginary part: ");
+(gdb) n
+23      scanf("%f", &c.img);
+(gdb) n
+Enter the imaginary part: 5
+24      return c;
+(gdb) n
+25  }
+(gdb) n
+input_n_complex (n=3, c=0x7ffeece637a0) at p11final.c:28
+28    for(int i=0; i<n; i++){
+(gdb) n
+29      c[i] = input_complex();
+(gdb) p i
+$4 = 2
+(gdb) s
+input_complex () at p11final.c:18
+18  Complex input_complex(){
+(gdb) n
+20      printf("Enter the real part: ");
+(gdb) n
+21      scanf("%f", &c.real);
+(gdb) n
+Enter the real part: 6
+22      printf("Enter the imaginary part: ");
+(gdb) n
+23      scanf("%f", &c.img);
+(gdb) n
+Enter the imaginary part: 7
+24      return c;
+(gdb) n
+25  }
+(gdb) n
+input_n_complex (n=3, c=0x7ffeece637a0) at p11final.c:28
+28    for(int i=0; i<n; i++){
+(gdb) n
+31  }
+(gdb) n
+main () at p11final.c:65
+65    res = add_n_complex(n, c);
+(gdb) s
+add_n_complex (n=3, c=0x7ffeece637a0) at p11final.c:42
+42    res.img = 0;
+(gdb) n
+43    res.real = 0;
+(gdb) n
+44    for(int i=0; i<n; i++){
+(gdb) n
+45      res = add(res, c[i]);
+(gdb) p i
+$5 = 0
+(gdb) s
+add (a=..., b=...) at p11final.c:35
+35      res.real = a.real + b.real;
+(gdb) n
+36      res.img = a.img + b.img;
+(gdb) n
+37      return res;
+(gdb) n
+38  }
+(gdb) n
+add_n_complex (n=3, c=0x7ffeece637a0) at p11final.c:44
+44    for(int i=0; i<n; i++){
+(gdb) n
+45      res = add(res, c[i]);
+(gdb) p i
+$6 = 1
+(gdb) s
+add (a=..., b=...) at p11final.c:35
+35      res.real = a.real + b.real;
+(gdb) n
+36      res.img = a.img + b.img;
+(gdb) n
+37      return res;
+(gdb) n
+38  }
+(gdb) n
+add_n_complex (n=3, c=0x7ffeece637a0) at p11final.c:44
+44    for(int i=0; i<n; i++){
+(gdb) n
+45      res = add(res, c[i]);
+(gdb) p i
+$7 = 2
+(gdb) s
+add (a=..., b=...) at p11final.c:35
+35      res.real = a.real + b.real;
+(gdb) n
+36      res.img = a.img + b.img;
+(gdb) n
+37      return res;
+(gdb) n
+38  }
+(gdb) n
+add_n_complex (n=3, c=0x7ffeece637a0) at p11final.c:44
+44    for(int i=0; i<n; i++){
+(gdb) n
+47    return res;
+(gdb) n
+48  }
+(gdb) n
+main () at p11final.c:66
+66    output(n, c, res);
+(gdb) s
+output (n=3, c=0x7ffeece637a0, result=...) at p11final.c:51
+51    if(n==1){
+(gdb) n
+54        for(int i=0; i<n-1; i++){
+(gdb) n
+55          printf("%0.2f + %0.2fi\n", c[i].real, c[i].img);
+(gdb) p i
+$8 = 0
+(gdb) n
+2.00 + 3.00i
+54        for(int i=0; i<n-1; i++){
+(gdb) n
+55          printf("%0.2f + %0.2fi\n", c[i].real, c[i].img);
+(gdb) p i
+$9 = 1
+(gdb) n
+4.00 + 5.00i
+54        for(int i=0; i<n-1; i++){
+(gdb) n
+57        printf("+ %0.2f + %0.2fi is\n%0.2f + %0.2fi\n", c[n-1].real, c[n-1].img, result.real, result.img);
+(gdb) p i
+No symbol "i" in current context.
+(gdb) n
++ 6.00 + 7.00i is
+12.00 + 15.00i
+59  }
+(gdb) n
+main () at p11final.c:67
+67    return 0;
+(gdb) n
+68  }
