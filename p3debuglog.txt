@@ -1,24 +1,45 @@
 (gdb) b main
-Breakpoint 1 at 0x7d6: file p3original.c, line 22.
+Breakpoint 1 at 0x7d6: file p3final.c, line 21.
 (gdb) r
-Starting program: /home/runner/pps-test1-Shashank1726/a.out 
+Starting program: /home/runner/pps-test1-Viraj200319-2/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p3original.c:22
-22  {
+Breakpoint 1, main () at p3final.c:21
+21  {
 (gdb) n
-24      input(&a, &b);
+23      input(&a, &b);
+(gdb) s
+input (a=0x7ffcc07b605c, b=0x7ffcc07b6060) at p3final.c:6
+6       printf("Enter the first number: ");
 (gdb) n
-Enter the first number: 4
+7       scanf("%d", a);
+(gdb) n
+Enter the first number: 2
+8       printf("Enter the second number: ");
+(gdb) n
+9       scanf("%d", b);
+(gdb) n
 Enter the second number: 5
-25      add(a, b, &sum);
+10  }
 (gdb) n
-26      output(a, b, sum);
+main () at p3final.c:24
+24      add(a, b, &sum);
+(gdb) s
+add (a=2, b=5, sum=0x7ffcc07b6064) at p3final.c:13
+13      *sum = a + b;
 (gdb) n
-sum of 4 + 5 is 9
-27      return 0;
+14  }
 (gdb) n
-28  }(gdb) c
-Continuing.
-[Inferior 1 (process 690) exited normally]
-(gdb) q
+main () at p3final.c:25
+25      output(a, b, sum);
+(gdb) s
+output (a=2, b=5, sum=7) at p3final.c:17
+17      printf("sum of %d + %d is %d\n", a, b, sum);
+(gdb) n
+sum of 2 + 5 is 7
+18  }
+(gdb) n
+main () at p3final.c:26
+26      return 0;
+(gdb) n
+27  }

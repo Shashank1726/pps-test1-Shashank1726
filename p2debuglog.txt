@@ -1,22 +1,59 @@
 (gdb) b main
-Breakpoint 1 at 0x7c5: file p2original.c, line 25.
+Breakpoint 1 at 0x7c5: file p2final.c, line 23.
 (gdb) r
-Starting program: /home/runner/pps-test1-Shashank1726/a.out 
+Starting program: /home/runner/pps-test1-Viraj200319-2/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p2original.c:25
-25    a = input();
+Breakpoint 1, main () at p2final.c:23
+23    a = input();
+(gdb) s
+input () at p2final.c:5
+5   int input(){
+(gdb) n
+7       printf("Enter a number: ");
+(gdb) n
+8       scanf("%d", &a);
+(gdb) n
+Enter a number: 2
+9       return a;
+(gdb) n
+10  }
+(gdb) n
+main () at p2final.c:24
+24    b = input();
+(gdb) s
+input () at p2final.c:5
+5   int input(){
+(gdb) n
+7       printf("Enter a number: ");
+(gdb) n
+8       scanf("%d", &a);
 (gdb) n
 Enter a number: 4
-26    b = input();
+9       return a;
 (gdb) n
-Enter a number: 5
-27    sum = add(a, b);
+10  }
 (gdb) n
-28    output(a, b, sum);
+main () at p2final.c:25
+25    sum = add(a, b);
+(gdb) s
+add (a=2, b=4) at p2final.c:14
+14      sum = a + b;
 (gdb) n
-sum of 4 + 5 is 9
-29    return 0;
-(gdb) c
-Continuing.
-[Inferior 1 (process 531) exited normally]
+15      return sum;
+(gdb) n
+16  }
+(gdb) n
+main () at p2final.c:26
+26    output(a, b, sum);
+(gdb) s
+output (a=2, b=4, sum=6) at p2final.c:19
+19      printf("sum of %d + %d is %d\n", a, b, sum);
+(gdb) n
+sum of 2 + 4 is 6
+20  }
+(gdb) n
+main () at p2final.c:27
+27    return 0;
+(gdb) n
+28  }
