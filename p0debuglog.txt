@@ -7,14 +7,16 @@ warning: Error disabling address space randomization: Operation not permitted
 Breakpoint 1, main () at p0original.c:3
 3   {
 (gdb) n
-5     printf("enter your name\n");
+5     printf("Enter your name\n");
 (gdb) n
-enter your name
+Enter your name
 6     scanf("%s",a);
 (gdb) n
-shashank
+Shashank
 7     printf("%s",a);
 (gdb) n
 8     return 0;
-(gdb) n
-9   }(gdb)  
+(gdb) c
+Continuing.
+Shashank[Inferior 1 (process 156) exited normally]
+(gdb) q
