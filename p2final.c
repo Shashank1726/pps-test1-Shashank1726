@@ -8,14 +8,14 @@ int input()
     return a;
 }
 
-int add(int a, int b)
+int add(int a,int b)
 {
     int sum;
     sum = a + b;
     return sum;
 }
 
-void output(int a, int b, int sum)
+void output(int a,int b,int sum)
 {
     printf("sum of %d + %d is %d\n", a, b, sum);
 }
