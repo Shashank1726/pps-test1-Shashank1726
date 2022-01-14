@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void input(int *a, int *b)
+void input(int *a,int *b)
 {
     printf("Enter the first number: ");
     scanf("%d", a);
@@ -8,12 +8,12 @@ void input(int *a, int *b)
     scanf("%d", b);
 }
 
-void add(int a, int b, int *sum)
+void add(int a,int b,int *sum)
 {
     *sum = a + b;
 }
 
-void output(int a, int b, int sum)
+void output(int a,int b,int sum)
 {
     printf("sum of %d + %d is %d\n", a, b, sum);
 }

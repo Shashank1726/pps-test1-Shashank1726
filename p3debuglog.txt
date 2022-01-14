@@ -2,7 +2,8 @@
 Breakpoint 1 at 0x7d6: file p3final.c, line 21.
 (gdb) r
 Starting program: /home/runner/pps-test1-Viraj200319-2/a.out 
-warning: Error disabling address space randomization: Operation not permitted
+warning: Error disabling address space randomization: 
+Operation not permitted
 
 Breakpoint 1, main () at p3final.c:21
 21  {
