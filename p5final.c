@@ -1,8 +1,8 @@
 #include<stdio.h>
 
-void input(int *a, int *b, int *c)
+void input(int *a,int *b,int *c)
 {
-    printf("Enter the first number: ");
+    printf("Enter the first number:");
     scanf("%d", a);
     printf("Enter the second number: ");
     scanf("%d", b);
@@ -10,7 +10,7 @@ void input(int *a, int *b, int *c)
     scanf("%d", c);
 }
 
-void cmp(int a, int b, int c, int *large)
+void cmp(int a,int b,int c,int *large)
 {
     if(a>b)
     {

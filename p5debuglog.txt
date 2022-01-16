@@ -11,7 +11,7 @@ Breakpoint 1, main () at p5final.c:23
 (gdb) s
 input (a=0x7fff4fe5ec98, b=0x7fff4fe5ec9c, c=0x7fff4fe5eca0)
     at p5final.c:7
-7       printf("Enter the first number: ");
+7       printf("Enter the first number:");
 (gdb) n
 8       scanf("%d", a);
 (gdb) n
