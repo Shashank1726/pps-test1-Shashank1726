@@ -10,9 +10,9 @@ Complex;
 Complex input()
 {
     Complex c;
-    printf("Enter the Real part: ");
+    printf("Enter the Real part:");
     scanf("%f", &c.real);
-    printf("Enter the Imaginary part: ");
+    printf("Enter the Imaginary part:");
     scanf("%f", &c.imaginary);
     return c;
 }

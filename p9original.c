@@ -2,9 +2,9 @@
 
 void input_two_string(char *a, char *b)
 {
-    printf("Enter a word: ");
+    printf("Enter a word:");
     scanf("%s", a);
-    printf("Enter a word: ");
+    printf("Enter a word:");
     scanf("%s", b);
 }
 

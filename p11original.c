@@ -10,7 +10,7 @@ Complex;
 int get_n()
 {
   int n;
-  printf("Enter the number of complex numbers: ");
+  printf("Enter the number of complex numbers:");
   scanf("%d", &n);
   return n;
 }

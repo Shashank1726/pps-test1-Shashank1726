@@ -10,12 +10,12 @@ Breakpoint 1, main () at p10final.c:33
 input () at p10final.c:11
 11  Complex input(){
 (gdb) n
-13      printf("Enter the Real part: ");
+13      printf("Enter the Real part:");
 (gdb) n
 14      scanf("%f", &c.real);
 (gdb) n
 Enter the Real part: 2
-15      printf("Enter the Imaginary part: ");
+15      printf("Enter the Imaginary part:");
 (gdb) n
 16      scanf("%f", &c.imaginary);
 (gdb) n
