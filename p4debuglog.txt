@@ -10,7 +10,7 @@ Breakpoint 1, main () at p4final.c:25
 input () at p4final.c:6
 6   int input(){
 (gdb) n
-8       printf("Enter a number: ");
+8       printf("Enter a number:");
 (gdb) n
 9       scanf("%d", &a);
 (gdb) n

@@ -3,12 +3,12 @@
 int input()
 {
     int a;
-    printf("Enter a number: ");
+    printf("Enter a number:");
     scanf("%d", &a);
     return a;
 }
 
-int cmp(int a, int b, int c)
+int cmp(int a,int b,int c)
 {
     if(a>b)
     {
