@@ -12,7 +12,7 @@ Breakpoint 1, main () at p7final.c:35
 input_size_array () at p7final.c:5
 5   int input_size_array(){
 (gdb) n
-7       printf("Enter the number of inputs: ");
+7       printf("Enter the number of inputs:");
 (gdb) n
 8       scanf("%d", &n);
 (gdb) n
