@@ -10,7 +10,7 @@ Breakpoint 1, main () at p8original.c:30
 input () at p8original.c:5
 5   float input(){
 (gdb) n
-7       printf("Enter a number: ");
+7       printf("Enter a number:");
 (gdb) n
 8       scanf("%f", &n);
 (gdb) n

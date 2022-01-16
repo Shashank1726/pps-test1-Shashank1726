@@ -3,7 +3,7 @@
 float input()
 {
     float n;
-    printf("Enter a number: ");
+    printf("Enter a number:");
     scanf("%f", &n);
     return n;
 }
