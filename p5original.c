@@ -1,50 +1,42 @@
 #include<stdio.h>
 
-void input(int *a,int *b,int *c)
+void input(int *a, int *b, int *c)
 {
-    printf("Enter the first number:");
-    scanf("%d", a);
-    printf("Enter the second number: ");
-    scanf("%d", b);
-    printf("Enter the third number: ");
-    scanf("%d", c);
+  printf("Enter the first number: ");
+  scanf("%d", a);
+  printf("Enter the second number: ");
+  scanf("%d", b);
+  printf("Enter the third number: ");
+  scanf("%d", c);
 }
 
-void cmp(int a,int b,int c,int *large)
+int cmp(int a, int b, int c)
 {
-    if(a>b)
-    {
-      if(a>c)
-      {
-        *large = a;
-      }
-      else
-      {
-        *large = c;
-      }
-    }
-    else
-    {
-      if(b>c)
-      {
-        *large = b;
-      }
-      else
-      {
-        *large = c;
-      }
-    }
+  if((a>=b)&&(a>=c))
+  {
+    return a;
+  }
+  else if(b>=c)
+  {
+    return b;
+  }
+  else(c>=a);
+  {
+    return c;
+  }
 }
-void output(int large)
+void output(int largest)
 {
-    printf("The largest is: %d\n", large);
+  printf("The largest number out of all inputs is: %d", largest);
 }
 
 int main()
 {
-  int a, b, c, large;
+  printf("Start Of The Program:\n");
+  int a, b ,c, largest;
   input(&a, &b, &c);
-  cmp(a, b, c, &large);
-  output(large);
+  largest=cmp(a, b, c);
+  output(largest);
+  printf("\nEnd Of Program:");
   return 0;
 }

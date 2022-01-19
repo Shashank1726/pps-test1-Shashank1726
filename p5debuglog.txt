@@ -1,51 +1,77 @@
+gcc -g p5original.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x810: file p5final.c, line 23.
+Breakpoint 1 at 0x85c: file p5original.c, line 34.
 (gdb) r
-Starting program: /home/runner/pps-test1-Viraj200319-10/a.out 
+Starting program: /home/runner/pps-test1-Vikas6584-2/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p5final.c:23
-23  {
+Breakpoint 1, main () at p5original.c:34
+34  {
 (gdb) n
-25    input(&a, &b, &c);
+35    printf("Start Of The Program:\n");
+(gdb) n
+Start Of The Program:
+37    input(&a, &b, &c);
 (gdb) s
-input (a=0x7fff4fe5ec98, b=0x7fff4fe5ec9c, c=0x7fff4fe5eca0)
-    at p5final.c:7
-7       printf("Enter the first number:");
+input (a=0x7ffe01259028, b=0x7ffe0125902c, c=0x7ffe01259030) at p5original.c:5
+5     printf("Enter the first number: ");
 (gdb) n
-8       scanf("%d", a);
+6     scanf("%d", a);
 (gdb) n
-Enter the first number: 2
-9       printf("Enter the second number: ");
+Enter the first number: 4
+7     printf("Enter the second number: ");
 (gdb) n
-10      scanf("%d", b);
+8     scanf("%d", b);
 (gdb) n
-Enter the second number: 1
-11      printf("Enter the third number: ");
+Enter the second number: 6
+9     printf("Enter the third number: ");
 (gdb) n
-12      scanf("%d", c);
+10    scanf("%d", c);
 (gdb) n
-Enter the third number: 3
-13  }
+Enter the third number: 9
+11  }
 (gdb) n
-main () at p5final.c:26
-26    cmp(a, b, c, &large);
+main () at p5original.c:38
+38    largest=cmp(a, b, c);
 (gdb) s
-cmp (a=2, b=1, c=3, large=0x7fff4fe5eca4) at p5final.c:16
-16     *large = a > b ? (a > c ? a : c) : (b > c ? b : c);
+cmp (a=4, b=6, c=9) at p5original.c:15
+15    if((a>=b)&&(a>=c))
 (gdb) n
-17  }
+19    else if(b>=c)
 (gdb) n
-main () at p5final.c:27
-27    output(large);
+25      return c;
+(gdb) n
+27  }
+(gdb) n
+main () at p5original.c:39
+39    output(largest);
 (gdb) s
-output (large=3) at p5final.c:19
-19      printf("The largest is: %d\n", large);
+output (largest=9) at p5original.c:30
+30    printf("The largest number out of all inputs is: %d", largest);
 (gdb) n
-The largest is: 3
-20  }
+31  }
 (gdb) n
-main () at p5final.c:28
-28    return 0;
+main () at p5original.c:40
+40    printf("\nEnd Of Program: ");
 (gdb) n
-29  }
+The largest number out of all inputs is: 9
+41    return 0;
+(gdb) c
+Continuing.
+End of Program: [Inferior 1 (process 631) exited normally]

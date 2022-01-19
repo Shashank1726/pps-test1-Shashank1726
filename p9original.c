@@ -10,10 +10,12 @@ void input_two_string(char *a, char *b)
 
 int cmp(char *a, char *b)
 {
+  
     int i;
     for(i=0; a[i] && (a[i] == b[i]); i++);
     return a[i] - b[i];
 }
+
 
 void output(char *a, char *b, int ans)
 {
