@@ -16,7 +16,6 @@ int cmp(char *a, char *b)
     return a[i] - b[i];
 }
 
-
 void output(char *a, char *b, int ans)
 {
     if(ans < 0)

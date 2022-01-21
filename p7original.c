@@ -8,6 +8,7 @@ int input_size_array()
     return n;
 }
 
+
 void input_array(int n, int a[n])
 {
     for(int i=0; i<n; i++)

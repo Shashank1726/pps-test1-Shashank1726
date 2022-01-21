@@ -157,7 +157,7 @@ output (n=5, a=0x7ffc5cc35e80, sum=23) at p7final.c:28
 2+3+5+6+7 is 23
 32  }
 (gdb) n
-main () at p7final.c:42
+main () at p7final.c:42 
 42      return 0;
 (gdb) n
 43  }

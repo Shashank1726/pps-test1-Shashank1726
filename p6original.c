@@ -18,6 +18,7 @@ int sum_n(int n)
     return ans;
 }
 
+
 void output(int n, int sum)
 {
     for(int i=1; i<n; i++)
